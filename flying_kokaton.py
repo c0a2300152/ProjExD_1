@@ -16,7 +16,7 @@ def main():
 
     kt_rct = kt_img.get_rect()
     kt_rct.center = 300, 200
-
+    #a
     
     tmr = 0
     while True:
