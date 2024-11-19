@@ -13,6 +13,9 @@ def main():
     bg_img_r = pg.transform.flip(bg_img, True, False)
     kt_img = pg.image.load("fig/3.png")
     kt_img = pg.transform.flip(kt_img, True, False)
+
+    kt_rct = kt_img.get_rect()
+   
     
     tmr = 0
     while True:
