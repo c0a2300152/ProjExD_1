@@ -24,7 +24,15 @@ def main():
             if event.type == pg.QUIT: return
         
         key_lst = pg.key.get_pressed()
-        
+
+        if key_lst[pg.K_UP]:  # 上矢印キーが押されたら
+            kk_rct.move_ip(0, -1)
+        if key_lst[pg.K_DOWN]:  # 下矢印キーが押されたら
+            kk_rct.move_ip(0, +1)
+        if key_lst[pg.K_LEFT]:  # 左矢印キーが押されたら
+            kk_rct.move_ip(-1, 0)
+        if key_lst[pg.K_RIGHT]:  # 右矢印キーが押されたら
+            kk_rct.move_ip(+1, 0)
 
         screen.blit(bg_img, [-tmr, 0])#貼り付けるメソッドが［blit]
         screen.blit(bg_img_r,[-tmr+1600, 0])
