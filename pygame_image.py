@@ -18,6 +18,8 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [-tmr, 0])#貼り付けるメソッドが［blit]
+        if tmr >= 800:
+            tmr = tmr%800
         screen.blit(kt_img, [300, 200])
         pg.display.update()
         tmr += 1        
