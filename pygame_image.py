@@ -23,6 +23,9 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         
+        key_lst = pg.key.get_pressed()
+        
+
         screen.blit(bg_img, [-tmr, 0])#貼り付けるメソッドが［blit]
         screen.blit(bg_img_r,[-tmr+1600, 0])
 
@@ -33,6 +36,7 @@ def main():
         pg.display.update()
         tmr += 1        
         clock.tick(200)
+
 
 
 if __name__ == "__main__":
