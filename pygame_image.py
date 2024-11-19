@@ -23,14 +23,14 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         
-        key_lst = pg.key.get_pressed()
-
+        key_lst = pg.key.get_pressed()#演習1(if文を削除)
+        kt_rct.move_ip(-1, 0)
         if key_lst[pg.K_UP]:  # 上矢印キーが押されたら
             kt_rct.move_ip(0, -1)
+
         if key_lst[pg.K_DOWN]:  # 下矢印キーが押されたら
             kt_rct.move_ip(0, +1)
-        if key_lst[pg.K_LEFT]:  # 左矢印キーが押されたら
-            kt_rct.move_ip(-1, 0)
+     
         if key_lst[pg.K_RIGHT]:  # 右矢印キーが押されたら
             kt_rct.move_ip(+1, 0)
 
