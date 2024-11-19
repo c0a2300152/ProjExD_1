@@ -18,7 +18,7 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])#貼り付けるメソッドが［blit]
-        
+        screen.blit(kt_img, [300, 200])
         pg.display.update()
         tmr += 1        
         clock.tick(10)
