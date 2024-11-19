@@ -25,14 +25,20 @@ def main():
         
         key_lst = pg.key.get_pressed()
 
+        kx = 0
+        ky = 0
+
+    
         if key_lst[pg.K_UP]:  # 上矢印キーが押されたら
-            kt_rct.move_ip(0, -1)
-        if key_lst[pg.K_DOWN]:  # 下矢印キーが押されたら
-            kt_rct.move_ip(0, +1)
-        if key_lst[pg.K_LEFT]:  # 左矢印キーが押されたら
-            kt_rct.move_ip(-1, 0)
-        if key_lst[pg.K_RIGHT]:  # 右矢印キーが押されたら
-            kt_rct.move_ip(+1, 0)
+            ky = -1
+        elif key_lst[pg.K_DOWN]:  # 下矢印キーが押されたら
+            ky = 1
+        elif key_lst[pg.K_LEFT]:  # 左矢印キーが押されたら
+            kx = -1
+        elif key_lst[pg.K_RIGHT]:  # 右矢印キーが押されたら
+            kx = 2
+        kt_rct.move_ip(-1+kx, ky)
+        
 
         screen.blit(bg_img, [-tmr, 0])#貼り付けるメソッドが［blit]
         screen.blit(bg_img_r,[-tmr+1600, 0])
