@@ -15,7 +15,8 @@ def main():
     kt_img = pg.transform.flip(kt_img, True, False)
 
     kt_rct = kt_img.get_rect()
-   
+    kt_rct.center = 300, 200
+
     
     tmr = 0
     while True:
